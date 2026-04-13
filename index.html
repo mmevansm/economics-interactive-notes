@@ -105,13 +105,17 @@
 </a>
 
 <script>
-document.getElementById('purchase-link').addEventListener('click', function () {
-  if (typeof gtag === 'function') {
-    gtag('event', 'click', {
-      event_category: 'purchase',
-      event_label: 'elasticity'
-    });
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const link = document.getElementById("purchase-link");
+
+  link.addEventListener("click", function () {
+    if (typeof gtag === "function") {
+      gtag('event', 'click', {
+        event_category: 'purchase',
+        event_label: 'elasticity'
+      });
+    }
+  });
 });
 </script>
         
