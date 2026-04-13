@@ -98,15 +98,23 @@
         <p>a. Elasticity of Demand</p>
 
                 <!-- FULL ACCESS BUTTON -->
-       <a class="btn"
+       <a class="btn" id="purchase-link"
    href="https://mmevansm.gumroad.com/l/cjgmy"
-   target="_blank"
-   onclick="gtag('event', 'click', {
-     'event_category': 'purchase',
-     'event_label': 'elasticity'
-   });">
+   target="_blank">
   See Content & Get Full Access
 </a>
+
+<script>
+document.getElementById('purchase-link').addEventListener('click', function () {
+  if (typeof gtag === 'function') {
+    gtag('event', 'click', {
+      event_category: 'purchase',
+      event_label: 'elasticity'
+    });
+  }
+});
+</script>
+        
       </div>
 
       <!-- MATH -->
