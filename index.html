@@ -3,13 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Interactive A-Level Economics Notes</title>
+  <title>Interactive A-Level & 1st Year Undergraduate Economics Notes</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background: #f4f6f8;
     }
 
@@ -31,11 +30,22 @@
     .btn {
       display: inline-block;
       padding: 10px 15px;
-      background: #1f3a93;
+      background: #272c3d;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       margin-top: 10px;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #444;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-left: 5px;
     }
 
     .grid {
@@ -66,72 +76,42 @@
     <p>Learn economics visually with interactive graphs, explanations, and exam practice.</p>
   </header>
 
-  <!-- FREE SAMPLE -->
-  <section>
-    <h2>🔥 Free Interactive Sample</h2>
-    <p>Try a live economics model before you buy.</p>
-
-    <a class="btn" href="#supply-demand">Open Supply & Demand Model</a>
-  </section>
-
-  <!-- TOPICS -->
+    <!-- TOPICS -->
   <section>
     <h2>📚 Topics</h2>
 
     <div class="grid">
+
+      <!-- MICRO -->
       <div class="card">
-        <h3>Microeconomics</h3>
-        <p>Supply, demand, elasticity, market failure</p>
+        <h3>1. Microeconomics</h3>
+        <p>a. Elasticity of Demand</p>
+
+                <!-- FULL ACCESS BUTTON -->
+        <a class="btn" href="https://mmevansm.gumroad.com/l/cjgmy" target="_blank">
+          See Content & Get Full Access
+        </a>
       </div>
 
+      <!-- MATH -->
       <div class="card">
-        <h3>Macroeconomics</h3>
-        <p>Inflation, unemployment, GDP, policy</p>
+        <h3>2. Mathematics for Economics</h3>
+        <p>a. Calculus Basics</p>
+
+        <!-- PREVIEW BUTTON -->
+        <a class="btn" href="preview/calculus-preview.html">
+          See Content & Get Full Access
+        </a>
+        
       </div>
+
     </div>
-  </section>
-
-  <!-- GUMROAD CTA -->
-  <section>
-    <h2>💰 Full Access</h2>
-    <p>Unlock all interactive modules and exam walkthroughs.</p>
-
-    <a class="btn" href="https://gumroad.com/YOUR-LINK" target="_blank">
-      Get Full Access
-    </a>
-  </section>
-
-  <!-- INTERACTIVE SECTION -->
-  <section id="supply-demand">
-    <h2>📈 Supply & Demand (Interactive)</h2>
-
-    <p>Adjust demand and see how price changes.</p>
-
-    <label>Demand level: <span id="demandValue">50</span></label><br>
-    <input type="range" min="0" max="100" value="50" id="demandSlider">
-
-    <h3>Market Result</h3>
-    <p>Equilibrium price: <span id="price">50</span></p>
   </section>
 
   <footer>
     <p>© Interactive Economics Notes</p>
   </footer>
 
-  <!-- SCRIPT -->
-  <script>
-    const slider = document.getElementById("demandSlider");
-    const price = document.getElementById("price");
-    const demandValue = document.getElementById("demandValue");
-
-    slider.oninput = function () {
-      demandValue.textContent = this.value;
-
-      // Simple model: price follows demand (you can upgrade later)
-      price.textContent = this.value;
-    };
-  </script>
-
 </body>
 
-</html>
+</html>>
