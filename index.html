@@ -54,7 +54,7 @@
       text-decoration: none;
       border-radius: 5px;
       margin-top: 10px;
-      margin-left: 5px;
+      margin-left: 8px;
     }
 
     .grid {
@@ -115,6 +115,14 @@
            data-label="calculus">
           See Content & Get Full Access
         </a>
+
+        <a class="btn-secondary sample-link"
+           href="https://mmevansm.gumroad.com/l/xnpdf?_gl=1*d552xp*_ga*MjA1MTkyNDY0Ny4xNzczMzk2NDA2*_ga_6LJN6D94N6*czE3NzY5NjY5OTckbzI4JGcxJHQxNzc2OTY4MjA1JGo1MiRsMCRoMA.."
+           target="_blank"
+           data-label="calculus-free-sample">
+          Free Sample Notes
+        </a>
+
       </div>
 
     </div>
@@ -127,16 +135,22 @@
   <!-- TRACKING SCRIPT -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const links = document.querySelectorAll(".purchase-link");
+      const links = document.querySelectorAll(".purchase-link, .sample-link");
 
       links.forEach(link => {
         link.addEventListener("click", function () {
+
           if (typeof gtag === "function") {
+            const category = link.classList.contains("sample-link")
+              ? "free_sample"
+              : "purchase";
+
             gtag('event', 'click', {
-              event_category: 'purchase',
+              event_category: category,
               event_label: link.getAttribute("data-label")
             });
           }
+
         });
       });
     });
@@ -145,4 +159,5 @@
 </body>
 
 </html>
+
 
