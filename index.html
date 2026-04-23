@@ -6,15 +6,14 @@
   <title>Interactive A-Level & 1st Year Undergraduate Economics Notes</title>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5G9ZC5S0EQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5G9ZC5S0EQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5G9ZC5S0EQ');
+  </script>
 
-  gtag('config', 'G-5G9ZC5S0EQ');
-</script>
-  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -86,7 +85,7 @@
     <p>Learn economics visually with interactive graphs, explanations, and exam practice.</p>
   </header>
 
-    <!-- TOPICS -->
+  <!-- TOPICS -->
   <section>
     <h2>📚 Topics</h2>
 
@@ -97,55 +96,25 @@
         <h3>1. Microeconomics</h3>
         <p>a. Elasticity of Demand</p>
 
-                <!-- FULL ACCESS BUTTON -->
-       <a class="btn" id="purchase-link"
-   href="https://mmevansm.gumroad.com/l/cjgmy"
-   target="_blank">
-  See Content & Get Full Access
-</a>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const link = document.getElementById("purchase-link");
-
-  link.addEventListener("click", function () {
-    if (typeof gtag === "function") {
-      gtag('event', 'click', {
-        event_category: 'purchase',
-        event_label: 'elasticity'
-      });
-    }
-  });
-});
-</script>
-        
+        <a class="btn purchase-link"
+           href="https://mmevansm.gumroad.com/l/cjgmy"
+           target="_blank"
+           data-label="elasticity">
+          See Content & Get Full Access
+        </a>
       </div>
 
       <!-- MATH -->
       <div class="card">
         <h3>2. Mathematics for Economics</h3>
         <p>a. Calculus Basics</p>
-       <!-- FULL ACCESS BUTTON -->
-       <a class="btn" id="purchase-link"
-   href=https://mmevansm.gumroad.com/l/gmwaqa"
-   target="_blank">
-  See Content & Get Full Access
-</a>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const link = document.getElementById("purchase-link");
-
-  link.addEventListener("click", function () {
-    if (typeof gtag === "function") {
-      gtag('event', 'click', {
-        event_category: 'purchase',
-        event_label: 'Calculus'
-      });
-    }
-  });
-});
-</script>        
+        <a class="btn purchase-link"
+           href="https://mmevansm.gumroad.com/l/gmwaqa"
+           target="_blank"
+           data-label="calculus">
+          See Content & Get Full Access
+        </a>
       </div>
 
     </div>
@@ -154,6 +123,24 @@ document.addEventListener("DOMContentLoaded", function () {
   <footer>
     <p>© Interactive Economics Notes</p>
   </footer>
+
+  <!-- TRACKING SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".purchase-link");
+
+      links.forEach(link => {
+        link.addEventListener("click", function () {
+          if (typeof gtag === "function") {
+            gtag('event', 'click', {
+              event_category: 'purchase',
+              event_label: link.getAttribute("data-label")
+            });
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 
