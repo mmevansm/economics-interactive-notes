@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive A-Level & 1st Year Undergraduate Economics Notes</title>
 
   <!-- Google tag (gtag.js) -->
@@ -36,24 +37,21 @@
       border-radius: 10px;
     }
 
-    .btn {
+    .btn, .btn-secondary {
       display: inline-block;
       padding: 10px 15px;
-      background: #272c3d;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       margin-top: 10px;
     }
 
+    .btn {
+      background: #272c3d;
+    }
+
     .btn-secondary {
-      display: inline-block;
-      padding: 10px 15px;
       background: #444;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
       margin-left: 8px;
     }
 
@@ -91,59 +89,58 @@
 
     <div class="grid">
 
-      <!-- MICRO -->
+      <!-- MICROECONOMICS (LEFT) -->
       <div class="card">
         <h3>1. Microeconomics</h3>
-        <p>a. Elasticity of Demand</p>
 
+        <p><strong>a. Elasticity of Demand</strong></p>
         <a class="btn purchase-link"
            href="https://mmevansm.gumroad.com/l/cjgmy"
            target="_blank"
            data-label="elasticity">
-          See Content & Get Full Access
+          Full Access
         </a>
         <a class="btn-secondary sample-link"
-           href="https://mmevansm.gumroad.com/l/vkshfg?_gl=1*1d6fd76*_ga*MjA1MTkyNDY0Ny4xNzczMzk2NDA2*_ga_6LJN6D94N6*czE3NzY5ODMwMjYkbzMxJGcwJHQxNzc2OTgzMDI5JGo1NyRsMCRoMA.."
+           href="https://mmevansm.gumroad.com/l/vkshfg"
            target="_blank"
            data-label="elasticity-free-sample">
-          Free Sample Notes
+          Free Sample
         </a>
-      <h3>2. Microeconomics</h3>
-        <p>a. Production</p>
 
+        <hr>
+
+        <p><strong>b. Production</strong></p>
         <a class="btn purchase-link"
            href="https://mmevansm.gumroad.com/l/cjgmy"
            target="_blank"
-           data-label="Productivity">
-          See Content & Get Full Access
+           data-label="production">
+          Full Access
         </a>
         <a class="btn-secondary sample-link"
-           href="https://mmevansm.gumroad.com/l/xnxqhl?_gl=1*7u2jm*_ga*MjA1MTkyNDY0Ny4xNzczMzk2NDA2*_ga_6LJN6D94N6*czE3Nzc2NzI4NTckbzQzJGcwJHQxNzc3NjcyODU3JGo2MCRsMCRoMA.."
+           href="https://mmevansm.gumroad.com/l/xnxqhl"
            target="_blank"
-           data-label="productivity - Preview">
-          Preview notes and link to full access
+           data-label="production-preview">
+          Preview
         </a>
       </div>
 
-      <!-- MATH -->
+      <!-- MATHEMATICS (RIGHT) -->
       <div class="card">
         <h3>2. Mathematics for Economics</h3>
-        <p>a. Calculus Basics</p>
 
+        <p><strong>a. Calculus Basics</strong></p>
         <a class="btn purchase-link"
            href="https://mmevansm.gumroad.com/l/gmwaqa"
            target="_blank"
            data-label="calculus">
-          See Content & Get Full Access
+          Full Access
         </a>
-
         <a class="btn-secondary sample-link"
-           href="https://mmevansm.gumroad.com/l/xnpdf?_gl=1*d552xp*_ga*MjA1MTkyNDY0Ny4xNzczMzk2NDA2*_ga_6LJN6D94N6*czE3NzY5NjY5OTckbzI4JGcxJHQxNzc2OTY4MjA1JGo1MiRsMCRoMA.."
+           href="https://mmevansm.gumroad.com/l/xnpdf"
            target="_blank"
            data-label="calculus-free-sample">
-          Free Sample Notes
+          Free Sample
         </a>
-
       </div>
 
     </div>
@@ -160,7 +157,6 @@
 
       links.forEach(link => {
         link.addEventListener("click", function () {
-
           if (typeof gtag === "function") {
             const category = link.classList.contains("sample-link")
               ? "free_sample"
@@ -171,7 +167,6 @@
               event_label: link.getAttribute("data-label")
             });
           }
-
         });
       });
     });
@@ -180,5 +175,3 @@
 </body>
 
 </html>
-
-
